@@ -1,0 +1,21 @@
+paths:
+  board_games_dir: "board-games"
+
+embedding:
+  model: text-embedding-3-large
+  dimension: 3072
+
+llm:
+  model: gpt-4o
+  temperature: 0
+
+pinecone:
+  metric: cosine
+  spec:
+    serverless:
+      cloud: aws
+      region: us-east-1
+
+text_splitter:
+  chunk_size: 1000
+  chunk_overlap: 200
