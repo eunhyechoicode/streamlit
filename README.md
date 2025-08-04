@@ -3,6 +3,11 @@
 
 A specialized chatbot for the award-winning Flip7 board game, using RAG technology to provide accurate, up-to-date game information.
 
+## Chatbot Demo 🤖
+
+See how I can help you learn Flip7!
+[Watch Demo](https://drive.google.com/file/d/11lqBZrYl_8mieOOuhvqIKeGSGHk4add1/view?usp=sharing) 💬
+
 ## Why Flip7? 🤔
 
 0. It wins so many board game awards 🏆 👍
