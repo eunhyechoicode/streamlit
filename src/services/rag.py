@@ -9,11 +9,11 @@ from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_core.chat_history import BaseChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
 
-from config import load_dictionary
-from embedding import get_embedding
-from examples import answer_examples
-from index import list_board_game_indices
-from llm_service_config import get_llm
+from src.config.dictionary import load_dictionary
+from services.index.get_embedding import get_embedding
+from services.examples.answer_examples import answer_examples
+from services.index import list_board_game_indices
+from services.llm.get_llm import get_llm
 
 store = {}
 
@@ -152,6 +152,7 @@ def get_ai_response(user_message):
     dictionary_chain = get_dictionary_chain()
     rag_chain = get_rag_chain()
     board_game_chain = {"input": dictionary_chain} | rag_chain
+    # board_game_chain = {"input": dictionary_chain}
     ai_response = board_game_chain.stream(
         {
             "question": user_message
