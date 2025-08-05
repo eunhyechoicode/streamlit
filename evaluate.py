@@ -7,10 +7,10 @@ import importlib.util
 from typing import Dict, List, Any
 
 from dotenv import load_dotenv
-from services.index import list_board_game_indices
-from src.config.model_config import load_config
-from services.llm import get_llm_model, get_judge_llm
-from services.rag import get_retriever
+from index import list_board_game_indices
+from config import load_config
+from llm_service_config import get_llm_model, get_judge_llm
+from rag import get_retriever
 from langsmith.evaluation import evaluate
 from langchain import hub
 
@@ -228,6 +228,5 @@ def run_evaluation():
         )
         print(f"Completed evaluation for {dataset_name}")
 
-# if __name__ == "__main__":
-#     create_evaluation_datasets()
-#     run_evaluation()
+# create_evaluation_datasets()
+# run_evaluation()
