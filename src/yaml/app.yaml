@@ -1,0 +1,8 @@
+app:
+  title: "Flip7 Game Master"
+  icon: "🃏"
+  caption: "Ask anything about Flip7 game rules and strategies!"
+
+chat:
+  placeholder: "Ask me anything about Flip7!"
+  loading_message: "🌟Flipping through the rule book..."
